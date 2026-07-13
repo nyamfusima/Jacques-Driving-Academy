@@ -21,7 +21,7 @@ export function Hero() {
           src={heroBg}
           alt=""
           className="h-full w-full"
-          imgClassName="object-cover object-center"
+          imgClassName="object-cover object-[center_28%]"
           fallbackClassName="from-ink via-brand-950 to-ink"
           iconClassName="text-white/10"
           loading="eager"
