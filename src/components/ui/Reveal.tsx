@@ -14,10 +14,10 @@ type RevealProps = {
 };
 
 const offset: Record<Direction, { x?: number; y?: number }> = {
-  up: { y: 26 },
-  down: { y: -26 },
-  left: { x: 26 },
-  right: { x: -26 },
+  up: { y: 16 },
+  down: { y: -16 },
+  left: { x: 16 },
+  right: { x: -16 },
   none: {},
 };
 

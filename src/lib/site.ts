@@ -56,10 +56,14 @@ export const telLink = `tel:${site.phoneTel}`;
 
 export type NavItem = { label: string; to: string };
 
+/**
+ * Section links point at "/#id" (scrolled on the home page); Contact is the
+ * only standalone page.
+ */
 export const navItems: NavItem[] = [
   { label: "Home", to: "/" },
-  { label: "Pricing", to: "/packages" },
-  { label: "Success Stories", to: "/success" },
-  { label: "About", to: "/about" },
+  { label: "About", to: "/#about" },
+  { label: "Pricing", to: "/#pricing" },
+  { label: "Gallery", to: "/#gallery" },
   { label: "Contact", to: "/contact" },
 ];

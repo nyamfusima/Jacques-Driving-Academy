@@ -1,38 +1,34 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { Logo } from "./Logo";
-import { Button } from "./ui/Button";
 import { SocialLinks } from "./SocialLinks";
-import { navItems, site, telLink, whatsappLink } from "@/lib/site";
+import { navItems, site, telLink } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-50">
-      {/* Top band */}
-      <div className="container-x grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:py-16">
+    <footer className="bg-ink text-white">
+      <div className="container-x grid gap-10 py-14 md:grid-cols-[1.5fr_1fr_1.2fr] md:py-16">
         {/* Brand */}
-        <div className="flex flex-col gap-5">
-          <Logo />
-          <p className="max-w-xs text-sm leading-relaxed text-neutral-500">
-            A registered driving school serving Mdantsane and greater East London.
-            Code 8 &amp; Code 10 lessons, learner's licence assistance and free
-            vehicle hire for your test.
+        <div className="flex flex-col items-start gap-5">
+          <Logo light />
+          <p className="max-w-xs text-sm leading-relaxed text-white/60">
+            A registered driving school offering Code 8 and Code 10 lessons across
+            Mdantsane and greater East London.
           </p>
-          <SocialLinks />
-
+          <SocialLinks variant="onBrand" size="sm" />
         </div>
 
         {/* Quick links */}
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-ink">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">
             Explore
           </h3>
-          <ul className="mt-4 flex flex-col gap-2.5">
+          <ul className="mt-4 flex flex-col gap-3">
             {navItems.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="text-sm text-neutral-500 transition-colors hover:text-brand-600"
+                  className="text-sm text-white/75 transition-colors hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -41,76 +37,34 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* Areas */}
-        <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-ink">
-            Areas Served
-          </h3>
-          <ul className="mt-4 grid grid-cols-1 gap-2.5">
-            {site.areas.slice(0, 6).map((area) => (
-              <li key={area} className="text-sm text-neutral-500">
-                {area}
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* Contact */}
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-ink">
-            Get In Touch
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">
+            Get in touch
           </h3>
-          <ul className="mt-4 flex flex-col gap-3.5 text-sm text-neutral-500">
-            <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
-              <span>
-                {site.addressLine}, {site.city}
-              </span>
-            </li>
+          <ul className="mt-4 flex flex-col gap-4 text-sm text-white/75">
             <li>
-              <a href={telLink} className="flex items-center gap-3 hover:text-brand-600">
-                <Phone className="h-4 w-4 shrink-0 text-brand-500" />
+              <a href={telLink} className="flex items-center gap-3 hover:text-white">
+                <Phone className="h-4 w-4 shrink-0 text-brand-400" />
                 {site.phoneDisplay}
               </a>
             </li>
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="flex items-center gap-3 hover:text-brand-600"
-              >
-                <Mail className="h-4 w-4 shrink-0 text-brand-500" />
-                {site.email}
-              </a>
-            </li>
             <li className="flex items-start gap-3">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
-              <span>Open weekdays 8am to 5pm, Saturdays 8am to 1pm</span>
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" />
+              <span>
+                {site.addressLine}, {site.city}, {site.region}
+              </span>
             </li>
           </ul>
-          <Button
-            as="a"
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="whatsapp"
-            size="sm"
-            className="mt-5"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Book on WhatsApp
-          </Button>
         </div>
       </div>
 
-      {/* Bottom band */}
-      <div className="border-t border-neutral-200">
-        <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-center sm:flex-row sm:text-left">
-          <p className="text-xs text-neutral-400">
+      <div className="border-t border-white/10">
+        <div className="container-x flex flex-col items-center justify-between gap-2 py-6 text-center sm:flex-row sm:text-left">
+          <p className="text-xs text-white/40">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p className="text-xs font-semibold text-neutral-500">
-            {site.tagline}
-          </p>
+          <p className="text-xs text-white/40">{site.tagline}</p>
         </div>
       </div>
     </footer>

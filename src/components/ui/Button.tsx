@@ -18,21 +18,20 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-500 text-white shadow-[var(--shadow-glow)] hover:bg-brand-600 hover:-translate-y-0.5",
+    "bg-brand-600 text-white shadow-[var(--shadow-soft)] hover:bg-brand-700",
   whatsapp:
-    "bg-[#25D366] text-white shadow-[0_14px_34px_-12px_rgba(37,211,102,0.6)] hover:bg-[#1ebe5b] hover:-translate-y-0.5",
+    "bg-[#25D366] text-white shadow-[var(--shadow-soft)] hover:bg-[#1ebe5b]",
   outline:
-    "border-2 border-neutral-200 bg-white text-ink hover:border-brand-300 hover:text-brand-600 hover:-translate-y-0.5 shadow-sm",
+    "border border-neutral-300 bg-white text-ink hover:border-ink hover:bg-neutral-50",
   ghost: "text-ink hover:bg-neutral-100",
-  white:
-    "bg-white text-ink shadow-[var(--shadow-card)] hover:-translate-y-0.5 hover:shadow-lg",
-  dark: "bg-ink text-white hover:bg-neutral-800 hover:-translate-y-0.5 shadow-lg",
+  white: "bg-white text-ink shadow-[var(--shadow-soft)] hover:bg-neutral-50",
+  dark: "bg-ink text-white hover:bg-neutral-800",
 };
 
 const sizes: Record<Size, string> = {
   sm: "h-9 px-4 text-sm",
   md: "h-11 px-5 text-[0.95rem]",
-  lg: "h-14 px-7 text-base",
+  lg: "h-13 px-7 text-base",
 };
 
 type CommonProps = {
