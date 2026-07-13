@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
-import { Check, MessageCircle } from "lucide-react";
+import { ShieldCheck, CalendarDays, Trophy, MessageCircle } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { Button } from "./ui/Button";
 import { ImageWithFallback } from "./ui/ImageWithFallback";
 import { heroBg } from "@/lib/images";
 import { EASE } from "@/lib/motion";
 
-const trustBadges = [
-  "Professional Instructors",
-  "Flexible Scheduling",
-  "High Student Success Rate",
+const trustBadges: { icon: LucideIcon; label: string }[] = [
+  { icon: ShieldCheck, label: "Registered Driving School" },
+  { icon: CalendarDays, label: "Flexible Scheduling" },
+  { icon: Trophy, label: "High Pass Rate" },
 ];
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[42rem] flex-col items-center justify-center overflow-hidden pt-28 pb-40 text-center text-white sm:min-h-[46rem] sm:pb-44">
+    <section className="relative isolate overflow-hidden text-white">
       {/* Background photo */}
       <div className="absolute inset-0 -z-20">
         <ImageWithFallback
@@ -26,25 +27,25 @@ export function Hero() {
           loading="eager"
         />
       </div>
-      {/* Black overlay (~45%) for readable text */}
+      {/* Black overlay (~50%) for readable text */}
       <div className="absolute inset-0 -z-10 bg-black/50" />
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: EASE }}
-        className="container-x flex flex-col items-center"
+        className="container-x flex min-h-[40rem] flex-col justify-center py-28 text-center sm:min-h-[44rem] sm:pb-44"
       >
-        <h1 className="mx-auto max-w-4xl text-[2.8rem] font-extrabold leading-[1.06] tracking-[-0.02em] sm:text-[3.4rem] lg:text-[4rem]">
+        <h1 className="mx-auto max-w-4xl text-balance text-[2.6rem] font-extrabold leading-[1.07] tracking-[-0.02em] sm:text-[3.4rem] lg:text-[4rem]">
           Pass Your Driving Test With Confidence
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.7] text-white/85">
-          Professional driving lessons in Mdantsane &amp; East London, helping
-          learners become safe and confident drivers.
+        <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-[1.6] text-white/85">
+          Professional Code 8 &amp; Code 10 driving lessons in Mdantsane and East
+          London.
         </p>
 
-        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
           <Button to="/#book" variant="whatsapp" size="lg">
             <MessageCircle className="h-5 w-5" />
             Book Your Lesson
@@ -55,13 +56,14 @@ export function Hero() {
         </div>
 
         {/* Trust badges */}
-        <ul className="mt-12 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8">
-          {trustBadges.map((badge) => (
-            <li key={badge} className="flex items-center gap-2 text-[0.95rem] font-medium">
-              <span className="grid h-6 w-6 place-items-center rounded-full bg-white/15 ring-1 ring-white/25">
-                <Check className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
-              </span>
-              {badge}
+        <ul className="mx-auto mt-11 flex max-w-2xl flex-wrap justify-center gap-x-7 gap-y-3">
+          {trustBadges.map(({ icon: Icon, label }) => (
+            <li
+              key={label}
+              className="flex items-center gap-2 text-[0.95rem] font-medium"
+            >
+              <Icon className="h-5 w-5 text-brand-300" strokeWidth={1.75} />
+              {label}
             </li>
           ))}
         </ul>

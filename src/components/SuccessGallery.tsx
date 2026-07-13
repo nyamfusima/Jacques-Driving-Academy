@@ -24,7 +24,7 @@ export function SuccessGallery() {
         >
           <figure
             className={cn(
-              "group relative h-full overflow-hidden rounded-2xl bg-neutral-100 ring-1 ring-black/5",
+              "group relative h-full overflow-hidden rounded-2xl bg-neutral-100 shadow-[var(--shadow-soft)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[var(--shadow-card)]",
               i === 0 ? "aspect-[4/5] lg:aspect-auto" : "aspect-square",
             )}
           >

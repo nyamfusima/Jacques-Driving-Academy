@@ -37,8 +37,8 @@ export function GoogleReviewBand() {
           <Stars rating={5} size={20} />
         </div>
         <p className="mt-2 text-sm text-neutral-500">
-          Rated <span className="font-semibold text-ink">5 stars on Google</span> by
-          our learners. We'd love for you to be our next happy driver.
+          <span className="font-semibold text-ink">Trusted by learners</span>{" "}
+          across Mdantsane and East London.
         </p>
       </div>
     </Reveal>

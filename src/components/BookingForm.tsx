@@ -56,7 +56,7 @@ export function BookingForm() {
         Book your driving lesson
       </h2>
       <p className="mt-2 text-neutral-500">
-        Fill this in and we'll continue on WhatsApp to confirm your slot.
+        Fill in your details and we'll confirm your booking via WhatsApp.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-7" noValidate>

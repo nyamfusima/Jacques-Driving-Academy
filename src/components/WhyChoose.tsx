@@ -1,11 +1,11 @@
 import type { LucideIcon } from "lucide-react";
 import {
   ShieldCheck,
-  HeartHandshake,
-  GraduationCap,
-  KeyRound,
-  CalendarClock,
-  Car,
+  UserCheck,
+  FileText,
+  CarFront,
+  CalendarDays,
+  Truck,
 } from "lucide-react";
 import { RevealGroup, RevealItem } from "./ui/Reveal";
 
@@ -15,32 +15,32 @@ const reasons: Reason[] = [
   {
     icon: ShieldCheck,
     title: "Registered & compliant",
-    desc: "A fully registered driving school you can trust.",
+    desc: "A fully registered school you can trust.",
   },
   {
-    icon: HeartHandshake,
+    icon: UserCheck,
     title: "Patient instructors",
-    desc: "We teach at a pace that suits you, never rushed.",
+    desc: "We teach at a pace that suits you.",
   },
   {
-    icon: GraduationCap,
+    icon: FileText,
     title: "Learner's licence help",
-    desc: "We prepare you for your learner's from scratch.",
+    desc: "We prepare you from scratch.",
   },
   {
-    icon: KeyRound,
+    icon: CarFront,
     title: "Free vehicle for your test",
-    desc: "Free car or truck hire with every full course.",
+    desc: "Free car or truck hire, every full course.",
   },
   {
-    icon: CalendarClock,
+    icon: CalendarDays,
     title: "Flexible lesson times",
-    desc: "Weekday and Saturday slots to fit your schedule.",
+    desc: "Weekday and Saturday slots.",
   },
   {
-    icon: Car,
+    icon: Truck,
     title: "Code 8 & Code 10",
-    desc: "Training for both cars and heavy vehicles.",
+    desc: "Training for cars and trucks.",
   },
 ];
 
@@ -52,14 +52,14 @@ export function WhyChoose() {
         return (
           <RevealItem key={r.title}>
             <div className="flex gap-4">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600">
-                <Icon className="h-5 w-5" />
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100">
+                <Icon className="h-6 w-6" strokeWidth={1.75} />
               </span>
               <div>
-                <h3 className="font-display text-lg font-semibold text-ink">
+                <h3 className="font-display text-lg font-bold text-ink">
                   {r.title}
                 </h3>
-                <p className="mt-1.5 text-[0.95rem] leading-relaxed text-neutral-600">
+                <p className="mt-1 text-[0.95rem] leading-relaxed text-neutral-600">
                   {r.desc}
                 </p>
               </div>

@@ -24,7 +24,7 @@ import {
 /* ------------------------------------------------------------------ */
 export const company = {
   intro:
-    "Jacques Driving Academy is a professional and registered driving school. We help learners become safe, confident and responsible drivers, with quality training for your learner's licence, driving lessons and driving test preparation for Code 8 and Code 10 vehicles.",
+    "Jacques Driving Academy is a registered driving school offering professional Code 8 and Code 10 training, helping learners become safe, confident and responsible drivers.",
   mission:
     "To help every student gain the skills and confidence they need to drive independently and safely on South African roads.",
   vision:
@@ -139,11 +139,11 @@ export const coursePackages: CoursePackage[] = [
       { label: "Car Hire (test)", price: "R500" },
     ],
     features: [
-      "Learner's licence assistance",
-      "Full K53 test preparation",
-      "Free car hire for your test*",
-      "Flexible lesson times",
-      "Pay per lesson if you prefer",
+      "Learner's assistance",
+      "K53 preparation",
+      "Free test vehicle",
+      "Flexible lessons",
+      "Pay-per-lesson option",
     ],
     ctaMessage:
       "Hi Jacques Driving Academy! 👋 I'm interested in Code 8 lessons. Could you share availability and get me started?",
@@ -163,11 +163,11 @@ export const coursePackages: CoursePackage[] = [
       { label: "Truck Hire (test)", price: "R750" },
     ],
     features: [
-      "Heavy vehicle driving lessons",
-      "Full test preparation",
-      "Free truck hire for your test*",
-      "Flexible lesson times",
-      "Pay per lesson if you prefer",
+      "Heavy vehicle lessons",
+      "K53 preparation",
+      "Free test vehicle",
+      "Flexible lessons",
+      "Pay-per-lesson option",
     ],
     ctaMessage:
       "Hi Jacques Driving Academy! 👋 I'd like to book Code 10 (truck) lessons. Please share available times and pricing.",

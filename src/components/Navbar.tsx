@@ -69,17 +69,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center lg:flex">
-          <Button
-            as="a"
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="whatsapp"
-            size="sm"
-          >
-            <MessageCircle className="h-4 w-4" />
-            WhatsApp
-          </Button>
+          <SocialLinks size="sm" />
         </div>
 
         {/* Mobile toggle */}

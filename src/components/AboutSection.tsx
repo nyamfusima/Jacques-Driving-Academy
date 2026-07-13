@@ -1,6 +1,5 @@
 import { SectionHeading } from "./ui/SectionHeading";
 import { ImageWithFallback } from "./ui/ImageWithFallback";
-import { WhyChoose } from "./WhyChoose";
 import { Reveal } from "./ui/Reveal";
 import { company } from "@/lib/data";
 import { images } from "@/lib/images";
@@ -28,10 +27,6 @@ export function AboutSection() {
               subtitle={company.intro}
             />
           </Reveal>
-        </div>
-
-        <div className="mt-16">
-          <WhyChoose />
         </div>
       </div>
     </section>
