@@ -27,7 +27,7 @@ export function SectionHeading({
     >
       <h2
         className={cn(
-          "text-balance text-3xl font-extrabold leading-[1.1] sm:text-4xl md:text-[2.7rem]",
+          "text-balance text-[2rem] font-bold leading-[1.15] sm:text-[2.5rem]",
           light ? "text-white" : "text-ink",
         )}
       >
@@ -36,7 +36,7 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "max-w-2xl text-pretty text-base leading-relaxed sm:text-lg",
+            "max-w-2xl text-pretty text-base leading-[1.7]",
             light ? "text-white/80" : "text-neutral-500",
           )}
         >

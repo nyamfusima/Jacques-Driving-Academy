@@ -24,11 +24,11 @@ export function PageHeader({
           <ChevronRight className="h-3.5 w-3.5" />
           <span className="font-medium text-ink">{current}</span>
         </nav>
-        <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] text-ink sm:text-5xl">
+        <h1 className="max-w-3xl text-4xl font-bold leading-[1.12] text-ink sm:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-600">
+          <p className="mt-5 max-w-2xl text-lg leading-[1.7] text-neutral-600">
             {subtitle}
           </p>
         )}

@@ -35,11 +35,11 @@ export function Hero() {
         transition={{ duration: 0.6, ease: EASE }}
         className="container-x flex flex-col items-center"
       >
-        <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.08] sm:text-5xl lg:text-6xl">
+        <h1 className="mx-auto max-w-4xl text-[2.8rem] font-extrabold leading-[1.06] tracking-[-0.02em] sm:text-[3.4rem] lg:text-[4rem]">
           Pass Your Driving Test With Confidence
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.7] text-white/85">
           Professional driving lessons in Mdantsane &amp; East London, helping
           learners become safe and confident drivers.
         </p>

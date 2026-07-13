@@ -85,7 +85,7 @@ export default function Home() {
       <section className="bg-sand-50 py-20 sm:py-28">
         <div className="container-x">
           <Reveal className="mx-auto flex max-w-3xl flex-col items-center rounded-3xl bg-brand-500 p-10 text-center text-white sm:p-14">
-            <h2 className="font-display text-3xl font-semibold sm:text-4xl">
+            <h2 className="font-display text-[2rem] font-bold sm:text-[2.5rem]">
               Ready to start driving?
             </h2>
             <p className="mt-3 max-w-md text-white/90">

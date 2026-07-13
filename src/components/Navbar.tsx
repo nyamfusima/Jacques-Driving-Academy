@@ -31,20 +31,16 @@ export default function Navbar() {
   }, [open]);
 
   // Light (white text) only over the dark hero on the home page, at the top.
-  const light = pathname === "/" && !scrolled;
-
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "border-b border-neutral-200/70 bg-white/90 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+        "fixed inset-x-0 top-0 z-50 border-b bg-white transition-shadow duration-300",
+        scrolled ? "border-neutral-200 shadow-sm" : "border-neutral-200/70",
       )}
     >
       <nav className="container-x flex h-16 items-center justify-between gap-4 sm:h-20">
         <Link to="/" aria-label="Jacques Driving Academy home">
-          <Logo light={light} />
+          <Logo />
         </Link>
 
         {/* Desktop nav */}
@@ -60,13 +56,9 @@ export default function Navbar() {
                   to={item.to}
                   className={cn(
                     "text-[0.95rem] font-medium transition-colors",
-                    light
-                      ? isActive
-                        ? "text-white"
-                        : "text-white/80 hover:text-white"
-                      : isActive
-                        ? "text-brand-700"
-                        : "text-neutral-600 hover:text-ink",
+                    isActive
+                      ? "text-brand-700"
+                      : "text-neutral-600 hover:text-ink",
                   )}
                 >
                   {item.label}
@@ -93,12 +85,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen((v) => !v)}
-          className={cn(
-            "grid h-11 w-11 place-items-center rounded-xl border transition-colors lg:hidden",
-            light
-              ? "border-white/30 bg-white/10 text-white backdrop-blur"
-              : "border-neutral-200 bg-white text-ink",
-          )}
+          className="grid h-11 w-11 place-items-center rounded-xl border border-neutral-200 bg-white text-ink lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >

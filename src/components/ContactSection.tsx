@@ -79,7 +79,7 @@ export function ContactSection() {
         delay={0.1}
         className="flex flex-col justify-center rounded-3xl bg-sand-50 p-8 ring-1 ring-black/5 sm:p-10"
       >
-        <h3 className="font-display text-2xl font-semibold text-ink">
+        <h3 className="font-display text-2xl font-bold text-ink">
           Book your first lesson
         </h3>
         <p className="mt-3 leading-relaxed text-neutral-600">

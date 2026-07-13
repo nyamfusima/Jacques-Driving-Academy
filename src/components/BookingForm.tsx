@@ -52,7 +52,7 @@ export function BookingForm() {
 
   return (
     <div className="rounded-[20px] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-black/5 sm:p-8 lg:p-10">
-      <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
+      <h2 className="font-display text-2xl font-bold text-ink sm:text-3xl">
         Book your driving lesson
       </h2>
       <p className="mt-2 text-neutral-500">

@@ -18,7 +18,7 @@ export function CoursePackageCard({ pkg }: { pkg: CoursePackage }) {
     >
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="font-display text-2xl font-semibold text-ink">
+          <h3 className="font-display text-xl font-bold text-ink">
             {pkg.code}
           </h3>
           <p className="mt-1 text-sm text-neutral-500">{pkg.vehicle}</p>
