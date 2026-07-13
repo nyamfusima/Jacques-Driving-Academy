@@ -16,7 +16,8 @@ export function AboutSection() {
               <ImageWithFallback
                 src={images.aboutStory}
                 alt={`A ${site.name} student with their new licence`}
-                className="aspect-[4/3] w-full"
+                className="aspect-[4/5] w-full"
+                imgClassName="object-top"
               />
             </div>
           </Reveal>

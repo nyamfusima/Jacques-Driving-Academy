@@ -10,13 +10,13 @@ export const studentPhotos = [
   "/images/Student-5.jpeg",
 ] as const;
 
-/** Full-bleed hero background — a genuine student success photo. */
-export const heroBg = "/images/Student-4.jpeg";
+/** Full-bleed hero background — a driving-lesson photo (cones + car). */
+export const heroBg = "/images/bg1.jpg";
 
 export const images = {
   // Section imagery uses genuine student success photos
   heroMain: "/images/Student-4.jpeg",
   about: "/images/student-1.jpeg",
-  aboutStory: "/images/Student-5.jpeg",
+  aboutStory: "/images/Student-3.jpeg",
   students: studentPhotos,
 };
